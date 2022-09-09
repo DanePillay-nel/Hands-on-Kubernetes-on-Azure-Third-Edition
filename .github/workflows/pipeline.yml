@@ -19,6 +19,7 @@ on:
 
 env:
   ACRNAME: handsonaksdp
+  ACRPASS: S852oEgVCWTnsluro+u+Vyo3z2zXMoR=
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -38,7 +39,7 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
           
       - name: ACR Login
-        run: az acr login -n $ACRNAME
+        run: az acr login -n $ACRNAME $ ACRPASS
 
       # Runs a set of commands using the runners shell
       - name: Build and push image
